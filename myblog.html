@@ -1,0 +1,163 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {font-family: "Lato", sans-serif;}
+  
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 16.666666%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 15px;
+    text-align: center;
+  }
+
+a.home {
+color: white;
+text-decoration: none;
+font-size: 3cm;
+font-family:Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: bold;
+}
+
+
+a.culture {
+  color: white;
+text-decoration: none;
+font-size: 3cm;
+font-family:Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: bold;
+}
+
+a.cars {
+color: white;
+text-decoration: none;
+font-size: 3cm;
+font-family:Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: bold;
+}
+
+a.wines {
+color: white;
+text-decoration: none;
+font-size: 3cm;
+font-family:Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: bold;
+}
+
+
+  a.travel_page {
+color: white;
+text-decoration: none;
+font-size: 3cm;
+font-family:Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: bold;
+}
+
+
+a.about {
+color: white;
+text-decoration: none;
+font-size: 3cm;
+font-family:Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: bold;
+}
+
+
+  #Home {background-color: black;}
+  #Culture {background-color:red;}
+  #Travel {background-color:green;}
+  #Cars {background-color:blue;}
+  #Wines {background-color:orange;}
+  #About {background-color:maroon;}
+
+
+    </style>
+  </head>
+  <body>
+    
+  <div id="Home" class="tabcontent">
+    <a href="myblog.html" class="home">Home</a>
+    <p>This is where it all starts</p>
+  </div>
+
+  <div id="Culture" class="tabcontent">
+    <a href="culture.html" class="culture">Culture</a>
+    <p>Culture is about most influential parts of the world</p>
+  </div>
+  
+  <div id="Travel" class="tabcontent">
+    <a href="travel.html" class="travel_page">Travel</a>
+    <p>This is where you want to be now</p> 
+  </div>
+  
+  <div id="Cars" class="tabcontent">
+    <a href="cars.html" class="cars">Cars</a>
+    <p>In this section you will see amazing man made machines</p>
+  </div>
+  
+  <div id="Wines" class="tabcontent">
+    <a href="wines.html" class="wines">Wines</a>
+    <p>This part doesn't need any explanation</p>
+  </div>
+
+  <div id="About" class="tabcontent">
+    <a href="about.html" class="about">About</a>
+    <p>Learn more about this blog</p>
+  </div>
+  
+  <button class="tablink" onclick="openCity('Home', this, 'black')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openCity('Culture', this, 'red')">Culture</button>
+  <button class="tablink" onclick="openCity('Travel', this, 'green')">Travel</button>
+  <button class="tablink" onclick="openCity('Cars', this, 'blue')">Cars</button>
+  <button class="tablink" onclick="openCity('Wines', this, 'orange')">Wines</button>
+  <button class="tablink" onclick="openCity('About', this, 'maroon')">About</button>
+
+  
+  <script>
+  function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+     
+  </body>
+  </html> 
+
+  
+</html>
